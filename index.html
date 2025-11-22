@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -8,19 +7,10 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Ecommerce Store</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../img/ecommerce_shopping_favicon.png">
+    <title>Ogani | Template</title>
 
     <!-- Google Font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -68,7 +58,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.php">Home</a></li>
+                <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="./shop-grid.html">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -78,8 +68,8 @@
                         <li><a href="./blog-details.html">Blog Details</a></li>
                     </ul>
                 </li>
-                <li><a href="./blog.php">Blog</a></li>
-                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -106,8 +96,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> ecommercestore@gmail.com</li>
-                                <li>Miễn phí ship từ đơn hàng 500k</li>
+                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                                <li>Free Shipping for all Order of $99</li>
                             </ul>
                         </div>
                     </div>
@@ -120,37 +110,16 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__language">
-                                <!-- <img src="img/language.png" alt=""> -->
+                                <img src="img/language.png" alt="">
                                 <div>English</div>
                                 <span class="arrow_carrot-down"></span>
                                 <ul>
-                                    <li><a href="#">Vietnamese</a></li>
+                                    <li><a href="#">Spanis</a></li>
                                     <li><a href="#">English</a></li>
                                 </ul>
                             </div>
-                            <!-- Đăng nhập sẽ hiện tên người dùng -->
                             <div class="header__top__right__auth">
-                                <?php
-                                include '../database/connect.php';
-                                if (isset($_SESSION['customer_id'])) {
-                                ?>
-
-                                    <div class="dropdown">
-                                        <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span><i class="fa fa-user mr-2"></i><?= $_SESSION['customer_name'] ?></span>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="#" onclick="alert('Đang phát triển....')" >Quản lý tài khoản</a></li>
-                                            <li><a class="dropdown-item" href="myorders.php">Đơn hàng của bạn</a></li>
-                                            <li><a class="dropdown-item" href="logout.php" onclick="alert('Bạn chắc chắn muốn đăng xuất')">Đăng xuất</a></li>
-                                        </ul>
-                                    </div>
-
-                                <?php } else {
-                                    echo '<a href="login.php"><i class="fa fa-user"></i>Đăng nhập</a>';
-                                }
-                                ?>
-
+                                <a href="#"><i class="fa fa-user"></i> Login</a>
                             </div>
                         </div>
                     </div>
@@ -161,50 +130,34 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.php">Trang chủ</a></li>
-                            <li><a href="./shop.php">Cửa hàng</a></li>
-                            <!-- <li><a href="#">Trang</a>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./shop-grid.html">Shop</a></li>
+                            <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
                                     <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                                     <li><a href="./checkout.html">Check Out</a></li>
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
-                            </li> -->
-                            <li><a href="./blog.php">Tin tức</a></li>
-                            <li><a href="./contact.php">Liên hệ</a></li>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
-                <!-- Hiện thị số lượng khi cho hàng vào giỏ -->
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>#</span></a></li>
-                            <li><a href="./cart.php"><i class="fa fa-shopping-bag"></i> <span>
-                                        <?php
-                                        $cart = [];
-                                        if (isset($_SESSION['cart'])) {
-                                            $cart = $_SESSION['cart'];
-                                        }
-
-                                        $count = 0;
-                                        $tongtien = 0;
-                                        foreach ($cart as $item) {
-                                            $count += $item['qty'];
-                                            $tongtien += $item['qty'] * $item['disscounted_price'];
-                                        }
-                                        echo $count;
-                                        ?>
-                                    </span></a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
-                        <div class="header__cart__price">Tổng tiền: <span><?= number_format($tongtien, 0, '', '.') . " VNĐ" ?></span></div>
+                        <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
                 </div>
             </div>
@@ -223,21 +176,20 @@
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>Danh mục</span>
+                            <span>All departments</span>
                         </div>
                         <ul>
-                            <!-- Lấy dữ liệu từ database -->
-                            <?php
-                            include '../database/connect.php';
-                            $sql_str = "SELECT * FROM categories ORDER BY name";
-                            $result = mysqli_query($conn, $sql_str);
-                            while ($row = mysqli_fetch_assoc($result)) {
-                            ?>
-
-                                <li><a href="#"><?= $row['name'] ?></a></li>
-
-                            <?php } ?>
-                            <!-- End -->
+                            <li><a href="#">Fresh Meat</a></li>
+                            <li><a href="#">Vegetables</a></li>
+                            <li><a href="#">Fruit & Nut Gifts</a></li>
+                            <li><a href="#">Fresh Berries</a></li>
+                            <li><a href="#">Ocean Foods</a></li>
+                            <li><a href="#">Butter & Eggs</a></li>
+                            <li><a href="#">Fastfood</a></li>
+                            <li><a href="#">Fresh Onion</a></li>
+                            <li><a href="#">Papayaya & Crisps</a></li>
+                            <li><a href="#">Oatmeal</a></li>
+                            <li><a href="#">Fresh Bananas</a></li>
                         </ul>
                     </div>
                 </div>
@@ -246,11 +198,11 @@
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
-                                    Tất cả
+                                    All Categories
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" name="tukhoa" placeholder="Tìm kiếm sản phẩm">
-                                <button type="submit" class="site-btn">Tìm</button>
+                                <input type="text" placeholder="What do yo u need?">
+                                <button type="submit" class="site-btn">SEARCH</button>
                             </form>
                         </div>
                         <div class="hero__search__phone">
@@ -258,17 +210,17 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="hero__search__phone__text">
-                                <h5>+123456789</h5>
-                                <span>Hỗ trợ 24/7</span>
+                                <h5>+65 11.188.888</h5>
+                                <span>support 24/7 time</span>
                             </div>
                         </div>
                     </div>
                     <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
                         <div class="hero__text">
-                            <span>SIÊU THỊ MINI</span>
-                            <h2>Hàng Tươi <br />Sạch 100%</h2>
-                            <p>Miễn phí ship từ đơn hàng 500k</p>
-                            <a href="#" class="primary-btn">Mua Ngay</a>
+                            <span>FRUIT FRESH</span>
+                            <h2>Vegetable <br />100% Organic</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
                         </div>
                     </div>
                 </div>
@@ -281,97 +233,177 @@
     <section class="categories">
         <div class="container">
             <div class="row">
-                <div class="section-title ml-4">
-                    <h2>Danh mục sản phẩm</h2>
-                </div>
                 <div class="categories__slider owl-carousel">
-
-                    <?php
-                    $sql_str = "SELECT * FROM categories ORDER BY name";
-                    $result = mysqli_query($conn, $sql_str);
-                    while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                        <div class="col-lg-3">
-                            <div class="categories__item set-bg" data-setbg="img/categories/cats.jpg">
-                                <h5><a href="#"><?= $row['name'] ?></a></h5>
-                            </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
+                            <h5><a href="#">Fresh Fruit</a></h5>
                         </div>
-                    <?php } ?>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
+                            <h5><a href="#">Dried Fruit</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
+                            <h5><a href="#">Vegetables</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
+                            <h5><a href="#">drink fruits</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
+                            <h5><a href="#">drink fruits</a></h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Categories Section End -->
 
-    <!-- Danh mục sản phẩm -->
+    <!-- Featured Section Begin -->
     <section class="featured spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Sản phẩm</h2>
+                        <h2>Featured Product</h2>
                     </div>
                     <div class="featured__controls">
                         <ul>
-                            <li class="active" data-filter="*">Tất cả</li>
-                            <?php
-                            $sql_str = "SELECT * FROM categories ORDER BY name";
-                            $result = mysqli_query($conn, $sql_str);
-                            while ($row = mysqli_fetch_assoc($result)) {
-                            ?>
-                                <li data-filter=".<?= $row['slug'] ?>"><?= $row['name'] ?></li>
-                            <?php } ?>
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".oranges">Oranges</li>
+                            <li data-filter=".fresh-meat">Fresh Meat</li>
+                            <li data-filter=".vegetables">Vegetables</li>
+                            <li data-filter=".fastfood">Fastfood</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- Hiển thị sản phẩm -->
-            <div class="row featured__filter g-4">
-                <?php
-                $sql_str = "SELECT products.id AS pid, products.name AS pname, images, price, disscounted_price, categories.slug AS cslug FROM products, categories WHERE products.category_id=categories.id;";
-                $result = mysqli_query($conn, $sql_str);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $anh_arr = explode(';', $row['images']);
-                ?>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mix <?= $row['cslug'] ?>">
-                        <a href="shop-detail.php?id=<?= $row['pid'] ?>" class="text-decoration-none">
-                            <div class="card h-100 shadow-sm hover-shadow">
-                                <div class="position-relative">
-                                    <img src="<?= "../admin/" . $anh_arr[0] ?>" class="card-img-top" style="height: 250px; object-fit: contain; padding: 1rem;">
-                                </div>
-                                <div class="card-body text-center">
-                                    <h6 class="card-title text-dark">
-                                        <?= $row['pname'] ?>
-                                    </h6>
-                                    <div class="prices mt-3">
-                                        <span style="text-decoration: line-through" class="text-muted small d-block">
-                                            <?= number_format($row['price'], 0, '', '.') . " VNĐ" ?>
-                                        </span>
-                                        <span class="fs-5 fw-bold text-danger">
-                                            <?= number_format($row['disscounted_price'], 0, '', '.') . " VNĐ" ?>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- <div class="position-absolute top-0 end-0 p-2 d-flex gap-4 translate-middle opacity-0 hover-icons">
-                                    <a class="btn btn-light btn-sm rounded-circle shadow" title="Yêu thích" onclick="even.stopPropagation();">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
-                                    <a href="cart.php?product_id=<?= $row['pid'] ?>" class="btn btn-light btn-sm rounded-circle shadow" title="Thêm vào giỏ">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                                </div> -->
-                            </div>
-                        </a>
+            <div class="row featured__filter">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
                     </div>
-                <?php } ?>
-            </div>
-
-            <!-- Nút xem thêm -->
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <a href="./shop.php" class="btn btn-success btn-lg px-4 rounded-pill">
-                        Xem thêm sản phẩm
-                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-5.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-6.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-7.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-8.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -384,20 +416,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="banner__pic">
-                        <div class="banner__item">
-                            <img src="./img/banner/banner-5.jpg" alt="">
-                            <div class="banner__text">
-                            </div>
-                        </div>
+                        <img src="img/banner/banner-1.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="banner__pic">
-                        <div class="banner__item">
-                            <img src="./img/banner/banner-6.jpg" alt="">
-                            <div class="banner__text">
-                            </div>
-                        </div>
+                        <img src="img/banner/banner-2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -406,7 +430,7 @@
     <!-- Banner End -->
 
     <!-- Latest Product Section Begin -->
-    <!-- <section class="latest-product spad">
+    <section class="latest-product spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
@@ -606,7 +630,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- Latest Product Section End -->
 
     <!-- Blog Section Begin -->
@@ -614,38 +638,57 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title from-blog__title text-center">
-                        <h2>Tin tức</h2>
+                    <div class="section-title from-blog__title">
+                        <h2>From The Blog</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <?php
-                $sql_str = "SELECT * FROM news ORDER BY created_at desc limit 0, 3";
-                $result = mysqli_query($conn, $sql_str);
-                while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-                    <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <a href="blog-detail.php?id=<?= $row['id'] ?>" class="text-decoration-none text-dark">
-                                <img src="<?= "../admin/" . $row['avatar'] ?>" class="img-fluid rounded-start" alt="Tin tức" style="height: 200px; object-fit: cover;">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title text-truncate">
-                                    <a href="blog-detail.php?id=<?= $row['id'] ?>" class="text-decoration-none text-dark">
-                                        <?= $row['title'] ?>
-                                    </a>
-                                </h5>
-                                <p class="card-text text-muted small">
-                                    <i class="fa fa-calendar-o"></i> <?= $row['created_at'] ?>
-                                </p>
-                                <p class="card-text text-justify">
-                                    <?= $row['sumary'] ?>
-                                </p>
-                            </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="img/blog/blog-1.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">Cooking tips make cooking simple</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
                         </div>
                     </div>
-                <?php } ?>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="img/blog/blog-2.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="img/blog/blog-3.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">Visit the clean farm in the US</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -658,43 +701,43 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Địa chỉ: Coming Soon!</li>
-                            <li>Số điện thoại: +123456789</li>
-                            <li>Email: ecommercestore@gmail.com</li>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello@colorlib.com</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
                     <div class="footer__widget">
-                        <h6>Hướng dẫn - Chính sách</h6>
+                        <h6>Useful Links</h6>
                         <ul>
-                            <li><a href="#">Về chúng tôi</a></li>
-                            <li><a href="#">Cửa hàng</a></li>
-                            <li><a href="#">Mua sắm an toàn</a></li>
-                            <li><a href="#">Vận chuyển</a></li>
-                            <li><a href="#">Chính sách bảo mật</a></li>
-                            <li><a href="#">Cam kết</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Delivery infomation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Chúng tôi là ai</a></li>
-                            <li><a href="#">Dịch vụ</a></li>
-                            <li><a href="#">Dự án</a></li>
-                            <li><a href="#">Liên hệ</a></li>
-                            <li><a href="#">Đổi mới</a></li>
-                            <li><a href="#">Chứng thực</a></li>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Innovation</a></li>
+                            <li><a href="#">Testimonials</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <h6>Liên hệ nhận ưu đãi</h6>
-                        <p>Nhận thông tin cập nhật mới nhất qua Email về cửa hàng của chúng tôi và các ưu đãi đặc biệt.</p>
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
                         <form action="#">
-                            <input type="text" placeholder="Nhập Email...">
-                            <button type="submit" class="site-btn">Đăng Ký</button>
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                         <div class="footer__widget__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -708,14 +751,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer__copyright">
-                        <div class="footer__copyright__text">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by Ecommerce Store
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
+                        <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
                         <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
                     </div>
                 </div>
@@ -733,8 +771,8 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+
 
 </body>
 

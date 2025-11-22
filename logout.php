@@ -1,6 +1,7 @@
 <?php
 session_start();
-unset($_SESSION['user']);
+unset($_SESSION['customer_id']);
 
-header("location: login.php");
+header("Location: index.php");
+exit();
 ?>
